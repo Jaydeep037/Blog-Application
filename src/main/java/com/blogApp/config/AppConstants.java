@@ -7,4 +7,8 @@ public class AppConstants {
 	public static final String SORT_BY = "postId";
 	public static final String SORT_DIR = "asc";
 	public static final String INVALID_IMAGE_FORMAT = "Invalid image format";
+	public static final Integer ADMIN_USER= 101;
+	public static final Integer NORMAL_USER=102;
+	
+	public static final String JWTSECRETE_NAME1="blogsecretkey";
 }

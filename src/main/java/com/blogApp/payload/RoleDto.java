@@ -1,12 +1,7 @@
-package com.blogApp.entities;
+package com.blogApp.payload;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+public class RoleDto {
 
-@Entity
-public class Role {
-
-	@Id
 	private Integer Id;
 	private String name;
 	public Integer getId() {
@@ -21,16 +16,13 @@ public class Role {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Role(Integer id, String name) {
+	public RoleDto(Integer id, String name) {
 		super();
 		Id = id;
 		this.name = name;
 	}
-	public Role() {
+	public RoleDto() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
-	
 	
 }

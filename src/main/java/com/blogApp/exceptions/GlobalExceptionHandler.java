@@ -23,6 +23,14 @@ public class GlobalExceptionHandler {
 		Genericresponse response = new Genericresponse(message, false);
 		return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
 	}
+	
+	@ExceptionHandler(UsernamePasswordNotFoundException.class)
+	public ResponseEntity<Genericresponse> usernamePasswordNotFoundException(UsernamePasswordNotFoundException ex){
+		
+		String message = ex.getMessage();
+		Genericresponse response = new Genericresponse(message, false);
+		return new ResponseEntity<Genericresponse>(response, HttpStatus.NOT_FOUND);
+	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<Map<String, String>> handlerMethodArgsNotValidException(MethodArgumentNotValidException ex) {

@@ -9,9 +9,11 @@ import com.blogApp.payload.UserResponse;
 @Service
 public interface UserService {
 
-	UserDto createUser(UserDto user);
+	UserDto registerNew(UserDto userDto);
+	
+	UserDto createUser(UserDto userDto);
 
-	UserDto updateUser(UserDto user, Integer userId);
+	UserDto updateUser(UserDto userDto, Integer userId);
 
 	UserDto getUserById(Integer UserId);
 
